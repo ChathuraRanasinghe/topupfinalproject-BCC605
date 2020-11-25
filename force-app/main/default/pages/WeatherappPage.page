@@ -1,0 +1,24 @@
+<apex:page standardController="Account" extensions="weatherapp">
+
+    <h1>Congratulations</h1>
+    <h1>This is your weather Forecast Application</h1>
+
+  
+  <apex:pageBlock title="{!city} Weather">
+      <apex:pageBlockSection >
+          <apex:pageMessages />
+          
+      <!--    <apex:outputText label="Temprature" value="{!temp}"/>-->
+      
+          <!--<apex:outputText label="Preassure" value="{!pressure}"/>-->
+      <apex:outputText label="Humidity" value="{!humidity}"/>
+      <apex:outputText label="Minimum_Temp" value="{!temp_min}"/>
+       <apex:outputText label="Maximum_Temp" value="{!temp_max}"/>
+          
+  </apex:pageBlockSection>
+  
+  </apex:pageBlock>
+
+
+
+</apex:page>

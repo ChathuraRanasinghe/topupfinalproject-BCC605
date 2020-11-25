@@ -1,0 +1,23 @@
+<apex:component layout="none" selfClosing="true">
+
+
+    <apex:attribute name="componentId" type="String" description="Component Id"></apex:attribute>
+    
+    <div name="{!componentId}" data-progress="true" class="slds-spinner--brand slds-spinner slds-spinner--large" style="display: none; z-index: 99999; position: fixed">
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+    </div>
+    <div name="{!componentId}" data-progress="true" class="slds-backdrop slds-backdrop--open" style="display: none"></div>
+    
+    <script type="text/javascript">
+        window["{!componentId}"] = {
+            show : function() {
+                jQuery( "[name='{!componentId}']" ).show();
+            },
+            hide : function() {
+                jQuery( "[name='{!componentId}']" ).hide();
+            }
+        };
+    </script>
+
+</apex:component>
